@@ -7,7 +7,6 @@ global using Projekt_aflevering.Codes.Models;
 
 
 
-
 //                       Quiz   1/5
 //-----------------------------------------------------------------------------------
 
@@ -67,7 +66,6 @@ global using Projekt_aflevering.Codes.Models;
 //                 svar
 //---------------------------------------------------------
 // nej givet det parent
-
 
 
 
@@ -136,8 +134,6 @@ global using Projekt_aflevering.Codes.Models;
 
 
 
-
-
 //                       Quiz   3/5
 //-----------------------------------------------------------------------------------
 ////List<Bil> biler = new()
@@ -192,5 +188,68 @@ global using Projekt_aflevering.Codes.Models;
 
 //   Biler.First(…);
 
+
+
+
 //                       Quiz   4/5
 //-----------------------------------------------------------------------------------
+
+//Alle bil skal have vægtafgift, derfor bør den ligge i
+//Bil klassen. Men man ved ikke hvordan man skal
+//implementer kode til udregning af vægt afgift i Bil
+//klassen fordi det er afhængigt af bilens mærke og
+//model. Som parent klasse kan Bil klasse ikke se
+//data i child klassen. Hvad skal man gøre her?
+//1. Brug abstrakt?
+//2. Brug virtual?
+//3. Brug Interface?
+//4. Brug overload?
+
+// man skal bruge abstract.   du laved selv noget ligende med synsinterval i codealong https://github.com/no-tec-cit/OOPH1/blob/master/OOPH1/Codes/Mortork%C3%B8ret%C3%B8j.cs + https://github.com/no-tec-cit/OOPH1/blob/master/OOPH1/Codes/Bil.cs
+
+
+//internal class MotorKøretøj
+//{
+//    public int HesteKræfter { get; set; }
+//}
+//internal class Bil : MotorKøretøj
+//{
+//    public string Mærke { get; set; }
+//    public double VægtAfgift()
+//    {
+//        // kode til udregning af
+//        // bilens vægt.
+//    }
+//}
+//internal class Audi : Bil
+//{
+//    public string Model { get; set; }
+//}
+
+
+
+
+//                       Quiz   5/5
+//-----------------------------------------------------------------------------------
+
+
+//Angiv vilket metode  er overloaded
+
+//setsyn er den der overload, de har samme signatur men forskelige argumenter 
+// signaturen er setsyn, argumerterne er i ( )
+//internal class Audi : Bil
+//{
+//    public string Model { get; set; }
+
+//    public string SetSyn(DateTime now, DateTime årgang)
+//    {
+//    }
+
+//    public string SetSyn(DateTime sidstSynet)
+//    {
+//    }
+
+//    public void Overload()
+//    {
+//    }
+//}
