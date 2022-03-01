@@ -205,7 +205,7 @@ global using Projekt_aflevering.Codes.Models;
 //3. Brug Interface?
 //4. Brug overload?
 
-// man skal bruge abstract.   du laved selv noget ligende med synsinterval i codealong https://github.com/no-tec-cit/OOPH1/blob/master/OOPH1/Codes/Mortork%C3%B8ret%C3%B8j.cs + https://github.com/no-tec-cit/OOPH1/blob/master/OOPH1/Codes/Bil.cs
+// man skal bruge abstract og overide,  du laved selv noget ligende med synsinterval i codealong https://github.com/no-tec-cit/OOPH1/blob/master/OOPH1/Codes/Mortork%C3%B8ret%C3%B8j.cs + https://github.com/no-tec-cit/OOPH1/blob/master/OOPH1/Codes/Bil.cs
 
 
 //internal class MotorKøretøj
