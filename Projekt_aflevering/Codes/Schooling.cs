@@ -9,12 +9,12 @@ namespace Projekt_aflevering.Codes
     internal abstract class Schooling
     {
 
-        public SchoolingCategory SchoolingName { get; set; }
+        
         public List<TECPerson>Teacher { get; set; }
 
         public List<string> Courses { get; set; }
+        public SchoolingCategory SchoolingName { get; set; }
 
-        
 
 
         public Schooling(SchoolingCategory schoolingName)
@@ -42,6 +42,7 @@ namespace Projekt_aflevering.Codes
             }
         }
         public abstract void GetTeacher();
+
     }
 
 }

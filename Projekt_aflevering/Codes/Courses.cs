@@ -42,9 +42,35 @@ namespace Projekt_aflevering.Codes
 
         public override void GetTeacher()
         {
-            foreach (string Course in (Enum.GetNames(typeof())))
+            List<TECPerson> teacher = new();
+
+            if ((int)SchoolingName == 1)
             {
-                SchoolingCourses.Add(Courses.FirstOrDefault(a => a.Contains("netværk")));
+
+                TECPerson person = teacher.FirstOrDefault(a => a.FullName == "Niels Olesen");
+                if (teacher != null) { Console.WriteLine(teacher); }
+
+
+            }
+            if ((int)SchoolingName == 2)
+            {
+
+
+                TECPerson person = teacher.FirstOrDefault(a => a.FullName == "Bo Hansen");
+                if (teacher != null) { Console.WriteLine(teacher); }
+
+
+
+            }
+            if ((int)SchoolingName == 3)
+            {
+
+
+                TECPerson person = teacher.FirstOrDefault(a => a.FullName == "Ole Nielsen");
+                if (teacher != null) { Console.WriteLine(teacher); }
+
+
+
             }
         }
 
