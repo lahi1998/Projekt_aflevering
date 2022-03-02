@@ -9,17 +9,17 @@ namespace Projekt_aflevering.Codes
     enum CourseCatogory
     {
         [Description("Grundlæggende Programmering")]
-        Grundlæggendeprogrammering,
+        Grundlæggende_Programmering,
         [Description("Objektorienteret Programmering")]
-        Objektorienteretprogrammering,
+        Objektorienteret_Programmering,
         [Description("Web Server")]
-        Webserver,
+        Web_Server,
         [Description("Database Server")]
-        Databaseserver,
+        Database_Server,
         [Description("WAN Netværk")]
-        WANnetværk,
+        WAN_Netværk,
         [Description("LAN Netværk")]
-        LANnetværk
+        LAN_Netværk
     }
     enum SchoolingCategory
     {
