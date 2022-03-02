@@ -6,40 +6,41 @@ using System.Threading.Tasks;
 
 namespace Projekt_aflevering.Codes
 {
-    internal class Courses : Schooling
+    internal sealed class Courses : Schooling
     {
         public List<string> SchoolingCourses { get; set; }
+
         public Courses(SchoolingCategory schoolingName) : base(schoolingName)
         {
-
+            SchoolingName = schoolingName;
         }
         public override void SetCourses()
         {
-            List<string> schoolingCources = new();
             base.SetCourses();
-            if ((int)SchoolingName == 1)
+
+            if (SchoolingName == SchoolingCategory.Programmeringslinje)
             {
-                foreach (string Course in (Enum.GetNames(typeof(CourseCategory))))
-                {
-                    SchoolingCourses.Add(Courses.FirstOrDefault(a => a.Contains("programmering")));
-                }
+
+                List<string> schoolingCourses = Courses.Where(a => a.Contains("Programmering")).ToList();
+                SchoolingCourses = schoolingCourses;
+
             }
-            if ((int)SchoolingName == 2)
+            if (SchoolingName == SchoolingCategory.Infrastrukturlinje)
             {
-                foreach (string Course in (Enum.GetNames(typeof(CourseCategory))))
-                {
-                    SchoolingCourses.Add(Courses.FirstOrDefault(a => a.Contains("server")));
-                }
+
+                List<string> schoolingCourses = Courses.Where(a => a.Contains("Netværk")).ToList();
+                SchoolingCourses = schoolingCourses;
+
             }
-            if ((int)SchoolingName == 3)
+            if (SchoolingName == SchoolingCategory.Supporterlinje)
             {
-                foreach (string Course in (Enum.GetNames(typeof(CourseCategory))))
-                {
-                    SchoolingCourses.Add(Courses.FirstOrDefault(a => a.Contains("netværk")));
-                }
+
+                List<string> schoolingCourses = Courses.Where(a => a.Contains("Server")).ToList();
+                SchoolingCourses = schoolingCourses;
+
+
             }
         }
-
         public override void GetTeacher()
         {
             List<TECPerson> teacher = new();
@@ -73,6 +74,7 @@ namespace Projekt_aflevering.Codes
 
             }
         }
+
 
 
 
